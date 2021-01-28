@@ -37,12 +37,25 @@ def HDL_driver():
     #Output Data
     output_HDL(data,analysis)
 
-def get LDL_input():
+def get_LDL_input():
     inputLDL = input("Enter an LDL value: ")
     return int(inputLDL)
 
+def analyze_LDL(data):
+    analysis = ""
+    if (data < 130):
+        analysis = "Normal"
+    elif (130 <= data <= 159):
+        analysis = "Borderline High"
+    elif (160 <= data <= 189):
+        analyis = "High"
+    elif (data > 190):
+        analysis = "Very High"
+
 def LDL_driver():
     #Get Data
+    get_LDL_input()
     #Analyze Data
+    analysis = analyze_LDL(data)
     #Output Data
 interface()
