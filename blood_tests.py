@@ -25,7 +25,7 @@ def analyze_HDL(data):
         analysis = "Borderline Low"
     return analysis
 
- def output_HDL(HDL, analysis):
+def output_HDL(HDL, analysis):
     print("The HDL entered was {}".format(HDL))
     print("The level is {}".format(analysis))
     
@@ -38,7 +38,7 @@ def HDL_driver():
     output_HDL(data,analysis)
 
 
-def   output_LDL(LDL, analysis):
+def output_LDL(LDL, analysis):
     print("The LDL entered was {}".format(LDL))
     print("The level is {}".format(analysis))
     
@@ -56,13 +56,14 @@ def analyze_LDL(data):
         analyis = "High"
     elif (data > 190):
         analysis = "Very High"
+    return analysis
 
 def LDL_driver():
     #Get Data
-    get_LDL_input()
+    data = get_LDL_input()
     #Analyze Data
     analysis = analyze_LDL(data)
     #Output Data
-    output_LDL(LDL, analysis)
+    output_LDL(data, analysis)
     
 interface()
